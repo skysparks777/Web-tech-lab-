@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fffbe6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #fffae6;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.notepad {
+    width: 200px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-image: url('notepad-background.jpg'); /* Add your cat notepad background here */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.notepad h2 {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+#history {
+    margin-top: 20px;
+    height: 250px;
+    overflow-y: auto;
+    font-size: 0.9rem;
+    color: #444;
+}
+
+#history p {
+    position: relative;
+    margin-left: 20px;
+    padding-left: 10px;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    color: #555;
+    border-left: 2px solid #ffe066;
+    padding-bottom: 5px;
+}
+
+#history p:before {
+    content: '→'; /* Use an arrow for each past calculation */
+    position: absolute;
+    left: -20px;
+    top: 0;
+    font-size: 1.2rem;
+    color: #ff6f69;
+}
+
+.calculator {
+    background-color: #ffe066;
+    border-radius: 15px;
+    padding: 20px;
+    width: 250px;
+}
+
+#display {
+    background-color: #ffb347;
+    height: 60px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    background-color: #ffcc5c;
+    border: none;
+    border-radius: 10px;
+    height: 60px;
+    font-size: 1.2rem;
+    color: #fff;
+    box-shadow: 0 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:active {
+    background-color: #ffb347;
+}
+
+.equal {
+    background-color: #ff6f69;
+    grid-column: span 2;
+}
