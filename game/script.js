@@ -3,7 +3,7 @@ let correctAnswers = 0;
 let incorrectAnswers = 0;
 let questionCount = 0;
 let timer;
-let timeLimit = 10;
+let timeLimit = 12;
 let currentQuestion;
 let difficultyLevels = ["easy", "hard", "hardest"];
 let currentLevelIndex = 0;
