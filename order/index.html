@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mellow Mugs </title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.google.com/specimen/Rubik+Burned?categoryFilters=Feeling:%2FExpressive%2FRugged" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>☕ MeLloW  mUgS</h1>
+    <p>Explore and customize your favorite beverages.</p>
+  </header>
+
+  <main>
+    <!-- Beverage Slider -->
+    <section class="slider">
+        <div class="slides-container">
+            <div class="slide" data-name="Blueberry" data-price="3.00">
+                <img src="https://i.pinimg.com/736x/9a/36/fe/9a36fec0b2a1ea95644bf2bdc0c9bc24.jpg" alt="Blueberry">
+                <h3>Blueberry Cupcake</h3>
+                <p class="price">$3.00</p>
+                <div class="quantity-controls">
+                  <button onclick="updateQuantity('Blueberry', -1)">-</button>
+                  <span id="Blueberry-quantity">1</span>
+                  <button onclick="updateQuantity('Blueberry', 1)">+</button>
+                </div>
+                <button onclick="addToOrder('Blueberry', 3.00)">Add to Order</button>
+            </div>
+            <div class="slide" data-name="Strawberry" data-price="3.00">
+                <img src="https://i.pinimg.com/736x/f4/c6/0a/f4c60af918be776d4133231ec06c92db.jpg" alt="Strawberry">
+                <h3>Strawberry Cupcake</h3>
+                <p class="price">$3.00</p>
+                <div class="quantity-controls">
+                  <button onclick="updateQuantity('Strawberry', -1)">-</button>
+                  <span id="Strawberry-quantity">1</span>
+                  <button onclick="updateQuantity('Strawberry', 1)">+</button>
+                </div>
+                <button onclick="addToOrder('Strawberry', 3.00)">Add to Order</button>
+            </div>
+    
+            <div class="slide" data-name="Caramel" data-price="3.00">
+                <img src="https://i.pinimg.com/736x/4d/cc/ac/4dccac1f898b992e25c0e79ce2e2db41.jpg" alt="Caramel">
+                <h3>Caramel Cupcake</h3>
+                <p class="price">$3.00</p>
+                <div class="quantity-controls">
+                  <button onclick="updateQuantity('Caramel', -1)">-</button>
+                  <span id="Caramel-quantity">1</span>
+                  <button onclick="updateQuantity('Caramel', 1)">+</button>
+                </div>
+                <button onclick="addToOrder('Caramel', 3.00)">Add to Order</button>
+            </div>
+    
+            <div class="slide" data-name="Coco" data-price="3.00">
+                <img src="https://i.pinimg.com/736x/04/36/fd/0436fdc5c36dacafa2055e818903819d.jpg" alt="Coco">
+                <h3>Coco Cupcake</h3>
+                <p class="price">$3.00</p>
+                <div class="quantity-controls">
+                  <button onclick="updateQuantity('Coco', -1)">-</button>
+                  <span id="Coco-quantity">1</span>
+                  <button onclick="updateQuantity('Coco', 1)">+</button>
+                </div>
+                <button onclick="addToOrder('Coco', 3.00)">Add to Order</button>
+            </div>
+            
+              <div class="slide" data-name="Espresso" data-price="3.00">
+                <img src="https://i.pinimg.com/736x/a1/09/49/a1094953d2990a7127a8e4d1e7b02715.jpg" alt="Espresso">
+                <h3>Espresso</h3>
+                <p class="price">$3.00</p>
+                <div class="quantity-controls">
+                  <button onclick="updateQuantity('Espresso', -1)">-</button>
+                  <span id="Espresso-quantity">1</span>
+                  <button onclick="updateQuantity('Espresso', 1)">+</button>
+                </div>
+                <button onclick="addToOrder('Espresso', 3.00)">Add to Order</button>
+              </div>
+
+              <div class="slide" data-name="Espresso" data-price="3.00">
+                <img src="https://i.pinimg.com/736x/10/60/97/1060971b80a394528911646b7d4340db.jpg" alt="Espresso">
+                <h3>Espresso</h3>
+                <p class="price">$3.00</p>
+                <div class="quantity-controls">
+                  <button onclick="updateQuantity('Espresso', -1)">-</button>
+                  <span id="Espresso-quantity">1</span>
+                  <button onclick="updateQuantity('Espresso', 1)">+</button>
+                </div>
+                <button onclick="addToOrder('Espresso', 3.00)">Add to Order</button>
+              </div>
+
+              <div class="slide" data-name="Espresso" data-price="3.00">
+                <img src="https://i.pinimg.com/736x/43/f0/45/43f0458fc14f5be0a2153301938d30f4.jpg" alt="Espresso">
+                <h3>Espresso</h3>
+                <p class="price">$3.00</p>
+                <div class="quantity-controls">
+                  <button onclick="updateQuantity('Espresso', -1)">-</button>
+                  <span id="Espresso-quantity">1</span>
+                  <button onclick="updateQuantity('Espresso', 1)">+</button>
+                </div>
+                <button onclick="addToOrder('Espresso', 3.00)">Add to Order</button>
+              </div>
+            
+        </div>
+        <button id="prev" class="nav-btn">❮</button>
+        <button id="next" class="nav-btn">❯</button>
+    </section>
+
+    <!-- Order Section -->
+    <section class="order-section">
+      <h2>Your Order</h2>
+      <ul id="order-list"></ul>
+      <div class="order-summary">
+        <h2>Total: <span id="total-amount">$0.00</span></h2>
+        <button id="place-order">Place Order</button>
+      </div>
+    </section>
+
+    <!-- Customization Section -->
+    <section class="customization-section">
+      <h2>Customize Your Order</h2>
+      <form id="customize-order-form">
+        <label>
+          Order Type:
+          <select id="order-type">
+            <option value="dine-in">Dine-in</option>
+            <option value="takeaway">Takeaway</option>
+          </select>
+        </label>
+        <label>
+          Add-ons:
+          <select id="add-ons">
+            <option value="none">None</option>
+            <option value="iced">Iced</option>
+            <option value="sprinkles">Sprinkles</option>
+          </select>
+        </label>
+        <label>
+          Special Instructions:
+          <textarea id="special-instructions" placeholder="Any special requests?"></textarea>
+        </label>
+        <button type="button" onclick="customizeOrder()">Apply Customization</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <h3>&copy; 🧁Thank you for visiting our shop (My PHP project). Designed with 💛 and lots of ☕.</h3>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

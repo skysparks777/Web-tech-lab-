@@ -1,0 +1,170 @@
+
+
+
+
+
+  /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fef2da;
+    text-align: center;
+    background-image: url('https://i.pinimg.com/736x/e8/87/80/e887804019adec1840d5f72b3c0388be.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Header */
+header {
+    background-color: #9c3a16;
+    color: white;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-family: 'Rubik Burned', sans-serif;
+    font-size: 36px;
+    margin: 0;
+}
+
+header p {
+    margin: 5px 0;
+}
+
+/* Slider Section */
+.slider {
+    position: relative;
+    overflow: hidden;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.slides-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  /* Center content */
+    text-align: center;
+    padding: 20px;
+    background: #933519;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.slide img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #247b99;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#prev {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
+}
+
+/* Order Section */
+.order-section {
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: left;
+}
+
+.order-section h2 {
+    text-align: center;
+}
+
+#order-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+#order-list li {
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px #247b99;
+}
+
+.order-summary {
+    text-align: center;
+}
+
+.customization-section {
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: left;
+}
+
+.customization-section form {
+    background: #933519;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px #247b99;
+}
+
+.customization-section label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+textarea {
+    width: 100%;
+    height: 60px;
+    border-radius: 5px;
+}
+
+button {
+    background: #247b99;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #1e5c73;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .slider {
+        max-width: 100%;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    .order-section,
+    .customization-section {
+        max-width: 100%;
+    }
+}
