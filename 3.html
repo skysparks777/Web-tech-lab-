@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Frames Example</title>
+</head>
+<frameset cols="20%,80%" border="1">
+    <!-- Navigation Frame -->
+    <frame srcdoc="
+        <h2>Navigation</h2>
+        <hr>
+        <ul>
+            <li><a href='#welcome' target='contentFrame'>Welcome</a></li>
+            <li><a href='#page1' target='contentFrame'>Page 1</a></li>
+            <li><a href='#page2' target='contentFrame'>Page 2</a></li>
+            <li><a href='#page3' target='contentFrame'>Page 3</a></li>
+        </ul>
+    " name="navFrame" title="Navigation" scrolling="auto">
+
+    <!-- Content Frame -->
+    <frame srcdoc="
+        <h1>Welcome</h1>
+        <p>Welcome to this example of a webpage using frames. Select a link from the navigation bar to view content here.</p>
+        <p>Frames allow you to divide the browser window into multiple sections, each displaying different content.</p>
+    " name="contentFrame" title="Content" scrolling="auto">
+</frameset>
+<noframes>
+    <p>Your browser does not support frames. Please update your browser for a better experience.</p>
+</noframes>
+</html>
